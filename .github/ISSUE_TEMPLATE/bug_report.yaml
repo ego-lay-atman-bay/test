@@ -9,54 +9,66 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
-    attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
   - type: textarea
     id: what-happened
     attributes:
       label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      description: Describe what happened.
+      placeholder: Describe what happened.
+      value: ""
     validations:
       required: true
-  - type: dropdown
-    id: version
-    attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-    validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
   - type: textarea
-    id: logs
+    id: expected-behavior
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      label: What is the expected behavior?
+      description: Describe what is the expected behavior (or what is expected to happen).
+      placeholder: What is expected.
+      value: ""
+    validations:
+      required: false
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshot(s) if any
+      description: Please provide any screenshots.
+  - type: input
+    id: wme-version
+    attributes:
+      label: Where's My Editor? version
+      description: |
+      What version of Where's My Editor? does this bug occur in. |
+      To find out the version, click on help > about. |
+      Latest is not a version
+      placeholder: Where's My Editor? version
+      value: ""
+    validations:
+      required: true
+  - type: input
+    id: wmwpy-version
+    attributes:
+      label: wmwpy version
+      description: |
+      What version of wmwpy does this bug occur in. |
+      To find out the version, click on help > about. |
+      Latest is not a version
+      placeholder: wmwpy version
+      value: ""
+    validations:
+      required: false
+  - type: input
+    id: os
+    attributes:
+      label: What OS are you using?
+      description: What OS are you using? e.g. Windows 10
+      placeholder: Windows 10
+      validations:
+        required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Output log (if relevent)
+      description: Please include output log. |
+      The log can be found under help > open log |
+      The log can also be found in the logs folder which is in the same folder as the app (if it's not there, blame pyinstaller). The filenames are the date and time they were created. Choose the latest one (`.log` files are just `.txt` files).
       render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
