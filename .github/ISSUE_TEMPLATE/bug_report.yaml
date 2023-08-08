@@ -58,8 +58,8 @@ body:
       label: What OS are you using?
       description: What OS are you using? e.g. Windows 10
       placeholder: Windows 10
-      validations:
-        required: true
+    validations:
+      required: true
   - type: textarea
     id: log
     attributes:
