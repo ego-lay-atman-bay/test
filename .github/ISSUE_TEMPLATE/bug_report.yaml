@@ -15,7 +15,6 @@ body:
       label: What happened?
       description: Describe what happened.
       placeholder: Describe what happened.
-      value: ""
     validations:
       required: true
   - type: textarea
@@ -24,7 +23,6 @@ body:
       label: What is the expected behavior?
       description: Describe what is the expected behavior (or what is expected to happen).
       placeholder: What is expected.
-      value: ""
     validations:
       required: false
   - type: textarea
@@ -41,7 +39,6 @@ body:
         To find out the version, click on help > about. |
         Latest is not a version
       placeholder: Where's My Editor? version
-      value: ""
     validations:
       required: true
   - type: input
@@ -53,7 +50,6 @@ body:
         To find out the version, click on help > about. |
         Latest is not a version
       placeholder: wmwpy version
-      value: ""
     validations:
       required: false
   - type: input
