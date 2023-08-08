@@ -68,4 +68,6 @@ body:
         Please include output log.
         The log can be found under help > open log
         The log can also be found in the logs folder which is in the same folder as the app (if it's not there, blame pyinstaller). The filenames are the date and time they were created. Choose the latest one (`.log` files are just `.txt` files).
+
+        The only part you really need is the end (last few lines. Each line starts with a time). If the error is not at the end, just copy the lines around the error.
       render: shell
