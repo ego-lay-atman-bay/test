@@ -28,15 +28,15 @@ body:
   - type: textarea
     id: screenshots
     attributes:
-      label: Screenshot(s) if any
+      label: Screenshots (if any)
       description: Please provide any screenshots.
   - type: input
     id: wme-version
     attributes:
       label: Where's My Editor? version
       description: |
-        What version of Where's My Editor? does this bug occur in. |
-        To find out the version, click on help > about. |
+        What version of Where's My Editor? does this bug occur in.
+        To find out the version, click on help > about.
         Latest is not a version
       placeholder: Where's My Editor? version
     validations:
@@ -46,8 +46,8 @@ body:
     attributes:
       label: wmwpy version
       description: |
-        What version of wmwpy does this bug occur in. |
-        To find out the version, click on help > about. |
+        What version of wmwpy does this bug occur in.
+        To find out the version, click on help > about.
         Latest is not a version
       placeholder: wmwpy version
     validations:
@@ -57,14 +57,15 @@ body:
     attributes:
       label: What OS are you using?
       description: What OS are you using? e.g. Windows 10
-      placeholder: Windows 10
+      placeholder: e.g. Windows 10
     validations:
       required: true
   - type: textarea
     id: log
     attributes:
       label: Output log (if relevent)
-      description: Please include output log. |
-        The log can be found under help > open log |
+      description: |
+        Please include output log.
+        The log can be found under help > open log
         The log can also be found in the logs folder which is in the same folder as the app (if it's not there, blame pyinstaller). The filenames are the date and time they were created. Choose the latest one (`.log` files are just `.txt` files).
       render: shell
