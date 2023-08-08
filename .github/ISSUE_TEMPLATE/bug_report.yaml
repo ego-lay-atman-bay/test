@@ -37,9 +37,9 @@ body:
     attributes:
       label: Where's My Editor? version
       description: |
-      What version of Where's My Editor? does this bug occur in. |
-      To find out the version, click on help > about. |
-      Latest is not a version
+        What version of Where's My Editor? does this bug occur in. |
+        To find out the version, click on help > about. |
+        Latest is not a version
       placeholder: Where's My Editor? version
       value: ""
     validations:
@@ -49,9 +49,9 @@ body:
     attributes:
       label: wmwpy version
       description: |
-      What version of wmwpy does this bug occur in. |
-      To find out the version, click on help > about. |
-      Latest is not a version
+        What version of wmwpy does this bug occur in. |
+        To find out the version, click on help > about. |
+        Latest is not a version
       placeholder: wmwpy version
       value: ""
     validations:
@@ -69,6 +69,6 @@ body:
     attributes:
       label: Output log (if relevent)
       description: Please include output log. |
-      The log can be found under help > open log |
-      The log can also be found in the logs folder which is in the same folder as the app (if it's not there, blame pyinstaller). The filenames are the date and time they were created. Choose the latest one (`.log` files are just `.txt` files).
+        The log can be found under help > open log |
+        The log can also be found in the logs folder which is in the same folder as the app (if it's not there, blame pyinstaller). The filenames are the date and time they were created. Choose the latest one (`.log` files are just `.txt` files).
       render: shell
