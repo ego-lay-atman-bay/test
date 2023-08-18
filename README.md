@@ -6,3 +6,5 @@ edit test
 Second edit
 
 New edit!
+
+Hi
