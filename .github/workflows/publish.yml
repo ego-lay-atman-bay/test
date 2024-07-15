@@ -5,22 +5,33 @@ on:
   release:
     types: [published]
 
+
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        version: [10, 12, 14]
+        include:
+          - os: ubuntu-latest
+            platform: Ubuntu
+          - os: macos-latest
+            platform: MacOS
+          - os: windows-latest
+            platform: Windows
+    runs-on: ${{ matrix.os }}
     steps:
     - name: Create file
       run: &&
-           echo "test" > release.txt &&
-           echo "more" &&
-           echo "even more!!!"
+           echo "test" > release-${{ matrix.platform }}.txt &&
+           echo "platform ${{ matrix.platform }}" &&
+           echo "os ${{ matrix.os }}"
     
     - name: Upload Release Asset
       uses: xresloader/upload-to-github-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        file: "release.txt"
+        file: "release-${{ matrix.platform }}.txt"
         update_latest_release: true
         release_id: ${{ github.event.release.id }}
