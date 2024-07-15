@@ -1,6 +1,7 @@
 name: Publish
 
 on:
+  workflow_dispatch:
   release:
     types: [published]
 
@@ -10,7 +11,9 @@ jobs:
     
     steps:
     - name: Create file
-      run: echo "test" > release.txt
+      run: echo "test" > release.txt &&
+           echo "more" &&
+           echo "even more!!!"
     
     - name: Upload Release Asset
       uses: xresloader/upload-to-github-release@v1
