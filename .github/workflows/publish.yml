@@ -11,7 +11,8 @@ jobs:
     
     steps:
     - name: Create file
-      run: echo "test" > release.txt &&
+      run: &&
+           echo "test" > release.txt &&
            echo "more" &&
            echo "even more!!!"
     
